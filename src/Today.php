@@ -50,7 +50,7 @@ class Today
     {
         return [
             '01/01',
-            function ($year) {
+            function ($year) { // Pâques
                 $days = easter_days($year) + 1;
                 $date = new \DateTime($year.'-03-21 +'.$days.' days');
 
@@ -58,14 +58,14 @@ class Today
             },
             '01/05',
             '08/05',
-            function ($year) {
-                $days = easter_days($year) + 40;
+            function ($year) { // Ascension
+                $days = easter_days($year) + 39;
                 $date = new \DateTime($year.'-03-21 +'.$days.' days');
 
                 return $date->format('d/m');
             },
-            function ($year) {
-                $days = easter_days($year) + 50;
+            function ($year) { // Pentecôte
+                $days = easter_days($year) + 49;
                 $date = new \DateTime($year.'-03-21 +'.$days.' days');
 
                 return $date->format('d/m');
