@@ -1,0 +1,34 @@
+{
+  "name": "matthieumota/today",
+  "description": "A PHP component to know if today is a particular day.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matthieu Mota",
+      "email": "matthieu@boxydev.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1.8",
+    "ext-calendar": "*"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.13",
+    "symfony/phpunit-bridge": "^4.1",
+    "symfony/var-dumper": "^4.1"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "MatthieuMota\\Component\\Today\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MatthieuMota\\Component\\Today\\Tests\\": "tests"
+    }
+  }
+}
