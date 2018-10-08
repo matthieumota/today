@@ -27,3 +27,7 @@ $today->getHolidays(); // Return array with all holidays.
 $today->isHoliday(); // True if today is holiday
 
 ```
+
+## Notes
+
+This component is work in progress, it's no stable. Also, you should note that only french holidays are hardcoded because not need to support multi zone, but a PR well documented and tested can be merge.
