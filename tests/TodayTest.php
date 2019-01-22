@@ -64,4 +64,22 @@ class TodayTest extends TestCase
         $this->assertTrue((new Today(new \DateTime('2019-06-09')))->isHoliday());
         $this->assertTrue((new Today(new \DateTime('2020-05-31')))->isHoliday());
     }
+
+    public function testTodayIsASeason()
+    {
+        $today = new Today(new \DateTime('2019-01-22'));
+        $this->assertSame('winter', $today->getSeason());
+
+        $today = new Today(new \DateTime('2019-04-22'));
+        $this->assertSame('spring', $today->getSeason());
+
+        $today = new Today(new \DateTime('2019-07-22'));
+        $this->assertSame('summer', $today->getSeason());
+
+        $today = new Today(new \DateTime('2019-10-22'));
+        $this->assertSame('autumn', $today->getSeason());
+
+        $today = new Today();
+        $this->assertContains($today->getSeason(), ['winter', 'spring', 'summer', 'autumn']);
+    }
 }

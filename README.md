@@ -27,6 +27,7 @@ $today = new Today();
 $today->getHolidays(); // Return array with all holidays.
 $today->isHoliday(); // True if today is holiday
 
+$today->getSeason(); // Return current season : winter, spring, summer or autumn
 ```
 
 ## Notes

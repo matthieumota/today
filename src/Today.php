@@ -24,6 +24,16 @@ class Today
     private $date;
 
     /**
+     * @var array
+     */
+    public $seasons = [
+        'winter' => [12, 1, 2],
+        'spring' => [3, 4, 5],
+        'summer' => [6, 7, 8],
+        'autumn' => [9, 10, 11]
+    ];
+
+    /**
      * Today constructor.
      *
      * @param \DateTimeInterface|null $date
@@ -99,5 +109,21 @@ class Today
         }
 
         return false;
+    }
+
+    /**
+     * To get today season.
+     *
+     * @return string
+     */
+    public function getSeason()
+    {
+        $month = (int) $this->date->format('n');
+
+        $season = array_filter($this->seasons, function ($range) use ($month) {
+            return in_array($month, $range);
+        });
+
+        return key($season);
     }
 }
