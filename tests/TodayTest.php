@@ -20,15 +20,13 @@ class TodayTest extends TestCase
     {
         $date = new \DateTime();
         $today = new Today();
-
         $this->assertInstanceOf(Today::class, $today);
         $this->assertInstanceOf(\DateTimeInterface::class, $today->getDate());
-        $this->assertEquals($date->format('Y-m-d'), $today->getDate()->format('Y-m-d'));
+        $this->assertSame($date->format('Y-m-d'), $today->getDate()->format('Y-m-d'));
 
         $date = new \DateTime('1985-10-21');
         $today = new Today($date);
-
-        $this->assertEquals($date->format('Y-m-d'), $today->getDate()->format('Y-m-d'));
+        $this->assertSame($date->format('Y-m-d'), $today->getDate()->format('Y-m-d'));
     }
 
     public function testTodayHasHolidays()
