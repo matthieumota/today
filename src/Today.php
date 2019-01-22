@@ -116,7 +116,7 @@ class Today
      *
      * @return string
      */
-    public function getSeason()
+    public function getSeason(): string
     {
         $month = (int) $this->date->format('n');
 
