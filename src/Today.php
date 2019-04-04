@@ -26,7 +26,7 @@ class Today
     /**
      * @var array
      */
-    public $seasons = [
+    private $seasons = [
         'winter' => [12, 1, 2],
         'spring' => [3, 4, 5],
         'summer' => [6, 7, 8],
