@@ -2,11 +2,11 @@ language: php
 sudo: false
 cache:
   directories:
-  - $HOME/.composer/cache
+    - $HOME/.composer/cache
 
 env:
-    global:
-        - CHECK_PHP_SYNTAX="false"
+  global:
+    - CHECK_PHP_SYNTAX="false"
 
 matrix:
   fast_finish: true
