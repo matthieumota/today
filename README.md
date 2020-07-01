@@ -1,7 +1,7 @@
 Today Component
 ===============
 
-[![Build Status](https://travis-ci.org/matthieumota/today.svg?branch=master)](https://travis-ci.org/matthieumota/today)
+![Tests](https://github.com/matthieumota/today/workflows/Tests/badge.svg)
 
 The Today component provides PHP Object Oriented library to know if today is a particular day, business-day, holiday, current season...
 
